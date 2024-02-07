@@ -1,0 +1,13 @@
+version: 0.2
+
+phases:
+  install:
+    runtime-versions:
+      java: corretto11
+  build:
+    commands:
+      - echo Build started on `date`
+      - mvn -DskipTests clean package
+  post_build:
+    commands:
+      - echo Build completed on `date`
